@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Amanar's Journal — practical writings on magic, witchcraft, ritual, protection, and the unseen." />
+<title>Journal — Amanar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+
+<header class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">AMANAR</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="blog.html" class="nav-cta">Journal</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero hero-compact">
+  <div class="hero-inner">
+    <p class="eyebrow">Amanar's Journal</p>
+    <h1 class="hero-title">Writings on the <span class="gold">Unseen</span></h1>
+    <p class="hero-sub">
+      Practical notes on ritual, protection, witchcraft, and the craft of
+      shaping reality. Published irregularly — when the work permits.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="blog-grid">
+
+      <article class="post-card glass">
+        <p class="post-meta">Ritual · 8 min read</p>
+        <h2><a href="#">The Dark Baptism: What It Is and When It Is Used</a></h2>
+        <p class="post-excerpt">
+          A rite of severance and rebirth — not for the curious, but for those
+          whose path requires a total break from what came before. An
+          explanation for serious inquirers.
+        </p>
+        <a href="#" class="post-link">Read →</a>
+      </article>
+
+      <article class="post-card glass">
+        <p class="post-meta">Protection · 6 min read</p>
+        <h2><a href="#">Signs You Are Under Magical Attack — and What to Do First</a></h2>
+        <p class="post-excerpt">
+          Unexplained fatigue, sudden financial collapse, recurring nightmares,
+          blocked relationships. A diagnostic guide before any ritual begins.
+        </p>
+        <a href="#" class="post-link">Read →</a>
+      </article>
+
+      <article class="post-card glass">
+        <p class="post-meta">Divination · 5 min read</p>
+        <h2><a href="#">Reading The Tarot of Satan: A Beginner's Frame</a></h2>
+        <p class="post-excerpt">
+          My own deck, twenty years in the making. How it differs from
+          traditional Tarot, and why its language is stricter.
+        </p>
+        <a href="#" class="post-link">Read →</a>
+      </article>
+
+      <article class="post-card glass">
+        <p class="post-meta">Money · 7 min read</p>
+        <h2><a href="#">Why Most Money Magic Fails (and What Works Instead)</a></h2>
+        <p class="post-excerpt">
+          Wealth rituals fail when the practitioner treats money as an object
+          rather than a current. A structural look at prosperity work.
+        </p>
+        <a href="#" class="post-link">Read →</a>
+      </article>
+
+      <article class="post-card glass">
+        <p class="post-meta">Talismans · 4 min read</p>
+        <h2><a href="#">On Consecration: Why an Amulet Is Not a Product</a></h2>
+        <p class="post-excerpt">
+          An amulet bought is inert. An amulet consecrated for a specific
+          person at a specific hour is a living link. The difference matters.
+        </p>
+        <a href="#" class="post-link">Read →</a>
+      </article>
+
+      <article class="post-card glass">
+        <p class="post-meta">Ethics · 9 min read</p>
+        <h2><a href="#">When to Refuse a Request</a></h2>
+        <p class="post-excerpt">
+          Twenty years in, I still turn away certain cases. A short essay on
+          the boundaries of this work, and why I hold them.
+        </p>
+        <a href="#" class="post-link">Read →</a>
+      </article>
+
+    </div>
+
+    <div class="blog-cta glass">
+      <h3>Have a case that requires attention?</h3>
+      <p>Serious or urgent inquiries only. Send photos, names, and a brief description of your request.</p>
+      <a class="btn btn-primary" href="https://wa.me/254757949247?text=Hello%20Amanar%2C%20I%20would%20like%20to%20request%20a%20consultation." target="_blank" rel="noopener">Request Consultation →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="brand-mark">✦</span> AMANAR</div>
+    <p class="footer-tag">Andrii Balaban · Master of Black Magic &amp; Witchcraft</p>
+    <div class="footer-socials">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Amanar — Andrii Balaban. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+  menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.post-card, .blog-cta').forEach(el => {
+    el.classList.add('reveal'); io.observe(el);
+  });
+</script>
+</body>
+</html>
