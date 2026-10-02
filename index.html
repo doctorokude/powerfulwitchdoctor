@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Shamman Ondieki — Master of Black Magic & Witchcraft. Love, protection, wealth, and complex magical assistance. 20+ years of practice." />
 <title>Shamman Ondieki — Master of Black Magic & Witchcraft</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -291,9 +292,9 @@
 
         <form
           class="contact-form glass"
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          id="requestForm"
+          action="https://formspree.io/f/mljdkqjq"
           method="POST"
-          enctype="multipart/form-data"
         >
           <h3>Send Your Request</h3>
 
@@ -341,8 +342,8 @@
           </label>
 
           <label class="form-file">
-            <span>Attach photos (optional in form — required before work begins)</span>
-            <input type="file" name="photos" accept="image/*" multiple />
+            <span>Photos — please send separately via WhatsApp after submitting this form</span>
+            <input type="file" name="photos" accept="image/*" multiple disabled />
           </label>
 
           <button type="submit" class="btn btn-primary btn-lg">Send Request →</button>
@@ -400,6 +401,7 @@
 </footer>
 
 <script>
+  // Smooth scroll offset for fixed nav
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
@@ -415,14 +417,17 @@
     });
   });
 
+  // Mobile menu
   const menuToggle = document.getElementById('menuToggle');
   const nav = document.getElementById('nav');
   menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
 
+  // Nav scroll state
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
 
+  // Reveal on scroll
   const io = new IntersectionObserver(entries => {
     entries.forEach(en => {
       if (en.isIntersecting) {
@@ -434,7 +439,58 @@
   document.querySelectorAll('.section-inner > *, .service-card, .step, .badge, .about-card, .contact-block, .contact-checklist, .disclaimer, .testimonial, .post-card, .blog-cta')
     .forEach(el => { el.classList.add('reveal'); io.observe(el); });
 
+  // Year
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Formspree inline submission (no redirect)
+  const form = document.getElementById('requestForm');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.innerHTML = `
+            <div style="text-align:center;padding:40px 20px;">
+              <div style="font-size:2.5rem;color:#c9a227;margin-bottom:16px;">✦</div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#e6c65a;margin-bottom:12px;">
+                Request Received
+              </h3>
+              <p style="color:#9a968c;font-size:.95rem;line-height:1.7;">
+                I will review your case and respond with timeframe and price.<br/>
+                For urgent matters, message me on WhatsApp.
+              </p>
+              <a href="https://wa.me/254757949247?text=Hello%20Doctor%20Shamman%20Ondieki%2C%20I%20just%20submitted%20a%20request%20via%20your%20website." target="_blank" rel="noopener"
+                 style="display:inline-block;margin-top:24px;padding:12px 28px;
+                        background:linear-gradient(120deg,#e6c65a,#c9a227);
+                        color:#0a0a0f;font-weight:600;border-radius:999px;
+                        text-decoration:none;font-size:.9rem;">
+                Open WhatsApp →
+              </a>
+            </div>
+          `;
+        } else {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          alert('Something went wrong. Please try WhatsApp instead.');
+        }
+      } catch (err) {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        alert('Network error. Please try WhatsApp instead.');
+      }
+    });
+  }
 </script>
 </body>
 </html>
