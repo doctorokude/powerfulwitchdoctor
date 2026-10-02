@@ -654,3 +654,50 @@ img{max-width:100%;display:block}
   .share-buttons{flex-direction:column;align-items:center}
   .share-buttons a{width:100%;max-width:280px;text-align:center}
 }
+/* ---------- HTML Sitemap ---------- */
+.sitemap-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-bottom: 40px;
+}
+.sitemap-section{
+  padding: 34px 30px;
+}
+.sitemap-section h3{
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--gold-soft);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(201,162,39,0.18);
+}
+.sitemap-section ul{
+  list-style: none;
+  padding: 0;
+}
+.sitemap-section li{
+  margin-bottom: 12px;
+}
+.sitemap-section a{
+  color: #cfcbc2;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: color 0.25s, padding-left 0.25s;
+  display: block;
+  padding: 6px 0;
+}
+.sitemap-section a:hover{
+  color: var(--gold-soft);
+  padding-left: 6px;
+}
+.sitemap-note{
+  padding: 24px 28px;
+  font-size: 0.88rem;
+  color: #bdb9b0;
+  border-left: 3px solid var(--gold);
+}
+.sitemap-note strong{
+  color: var(--gold-soft);
+}
