@@ -1,0 +1,27 @@
+# robots.txt for Shamman Ondieki — powerfulwitchdoctor
+# https://doctorokude.github.io/powerfulwitchdoctor/
+
+# Allow all well-behaved crawlers full access
+User-agent: *
+Allow: /
+
+# Disallow nothing currently — the entire site is public content
+# If you later add admin pages or private files, list them below:
+# Disallow: /admin/
+# Disallow: /private/
+
+# Block aggressive SEO scrapers that ignore content ownership
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://doctorokude.github.io/powerfulwitchdoctor/sitemap.xml
