@@ -701,3 +701,16 @@ img{max-width:100%;display:block}
 .sitemap-note strong{
   color: var(--gold-soft);
 }
+.footer-links{
+  margin-bottom: 12px;
+}
+.footer-links a{
+  font-size: 0.82rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  transition: color 0.25s;
+}
+.footer-links a:hover{
+  color: var(--gold-soft);
+}
+
