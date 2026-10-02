@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Site map — Shamman Ondieki, Master of Black Magic & Witchcraft." />
+<title>Site Map — Shamman Ondieki</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+
+<header class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">SHAMMAN ONDIEKI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="blog.html" class="nav-cta">Journal</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero hero-compact">
+  <div class="hero-inner">
+    <p class="eyebrow">Site Map</p>
+    <h1 class="hero-title">All <span class="gold">Pages</span></h1>
+    <p class="hero-sub">
+      Every page on this site, in one place.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+
+    <div class="sitemap-grid">
+
+      <div class="sitemap-section glass">
+        <h3>Main Pages</h3>
+        <ul>
+          <li><a href="index.html">Home — Master of Black Magic &amp; Witchcraft</a></li>
+          <li><a href="index.html#about">About Shamman Ondieki</a></li>
+          <li><a href="index.html#services">Services of Power</a></li>
+          <li><a href="index.html#process">Consultation Process</a></li>
+          <li><a href="index.html#testimonials">Client Testimonials</a></li>
+          <li><a href="index.html#contact">Request Assistance</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-section glass">
+        <h3>Journal</h3>
+        <ul>
+          <li><a href="blog.html">Journal Index — All Entries</a></li>
+          <li><a href="post.html">The Dark Baptism: What It Is and When It Is Used</a></li>
+          <li><a href="post-attack.html">Signs You Are Under Magical Attack</a></li>
+          <li><a href="post-money.html">Why Most Money Magic Fails</a></li>
+          <li><a href="post-consecration.html">On Consecration: Why an Amulet Is Not a Product</a></li>
+          <li><a href="post-tarot.html">Reading The Tarot of Satan</a></li>
+          <li><a href="post-refuse.html">When to Refuse a Request</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-section glass">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="https://wa.me/254757949247" target="_blank" rel="noopener">WhatsApp — +254 757 949 247</a></li>
+          <li><a href="mailto:doctorokude@gmail.com">Email — doctorokude@gmail.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="sitemap-note glass">
+      <p>
+        <strong>Note:</strong> This HTML sitemap exists because the standard XML
+        sitemap is not reliably fetched by Google Search Console on GitHub Pages.
+        Every page is linked directly above so search engines can discover it
+        through normal crawling.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="brand-mark">✦</span> SHAMMAN ONDIEKI</div>
+    <p class="footer-tag">Master of Black Magic &amp; Witchcraft · 20+ Years of Practice</p>
+    <div class="footer-socials">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Shamman Ondieki. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+  menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
